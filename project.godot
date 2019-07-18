@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://StateMachine.gd"
+} ]
 _global_script_class_icons={
-
+"StateMachine": ""
 }
 
 [application]
@@ -19,6 +24,11 @@ config/name="Run Escape"
 run/main_scene="res://scenes/StartMenu.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/dpi/allow_hidpi=true
+
 [rendering]
 
+quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"

@@ -1,13 +1,57 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://shared/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://shared/DirtAutoTile.tres" type="TileSet" id=2]
+[ext_resource path="res://Sprites/Misc/frontier_pixel.png" type="Texture" id=1]
+[ext_resource path="res://shared/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://shared/DirtAutoTile.tres" type="TileSet" id=3]
+[ext_resource path="res://shared/TwinLion.tscn" type="PackedScene" id=4]
+[ext_resource path="res://shared/Sammy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://shared/TobiasDialogue.tscn" type="PackedScene" id=6]
+[ext_resource path="res://shared/HelpZone.tscn" type="PackedScene" id=7]
 
 [node name="World1" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 480, -64 )
+texture = ExtResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 32, 37 )
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource( 2 )
+position = Vector2( 0, 4 )
+tile_set = ExtResource( 3 )
 format = 1
-tile_data = PoolIntArray( 131070, 0, 1, 131071, 0, 65536, 65536, 0, 65536, 65537, 0, 2, 196606, 0, 65537, 196607, 0, 131072, 131072, 0, 131072, 131073, 0, 65538 )
+tile_data = PoolIntArray( -458660, 0, 6, -458659, 0, 196609, -458658, 0, 196609, -458657, 0, 196609, -458656, 0, 196609, -458655, 0, 196609, -458654, 0, 196609, -458653, 0, 196609, -458652, 0, 196609, -458651, 0, 196609, -458650, 0, 196609, -458649, 0, 7, -393124, 0, 65541, -393113, 0, 65541, -327588, 0, 65541, -327577, 0, 65541, -262052, 0, 65541, -262041, 0, 65541, -196532, 0, 196608, -196531, 0, 196609, -196530, 0, 196609, -196529, 0, 196610, -196516, 0, 131077, -196505, 0, 65541, -131030, 0, 196608, -131029, 0, 196610, -131012, 0, 196608, -131011, 0, 196609, -131010, 0, 196609, -131009, 0, 196610, -130969, 0, 65541, -65503, 0, 196608, -65502, 0, 196609, -65501, 0, 196610, -65433, 0, 65541, 20, 0, 1, 21, 0, 65536, 22, 0, 2, 29, 0, 196608, 30, 0, 196609, 31, 0, 196610, 40, 0, 196608, 41, 0, 196610, 71, 0, 196608, 72, 0, 196609, 73, 0, 196609, 74, 0, 196609, 75, 0, 196610, 86, 0, 1, 87, 0, 65536, 88, 0, 65536, 89, 0, 65536, 90, 0, 65536, 91, 0, 2, 103, 0, 65541, 65536, 0, 196608, 65537, 0, 196609, 65538, 0, 196609, 65539, 0, 196609, 65540, 0, 196609, 65541, 0, 196609, 65542, 0, 196609, 65543, 0, 196609, 65544, 0, 196609, 65545, 0, 196609, 65546, 0, 196609, 65547, 0, 196609, 65548, 0, 196609, 65549, 0, 196609, 65550, 0, 196609, 65551, 0, 196609, 65552, 0, 196609, 65553, 0, 196609, 65554, 0, 196609, 65555, 0, 196609, 65556, 0, 65544, 65557, 0, 131072, 65558, 0, 65547, 65559, 0, 196609, 65560, 0, 196609, 65561, 0, 196609, 65562, 0, 196609, 65563, 0, 196610, 65572, 0, 196608, 65573, 0, 196609, 65574, 0, 196610, 65581, 0, 1, 65582, 0, 65536, 65583, 0, 65536, 65584, 0, 65536, 65585, 0, 65536, 65586, 0, 65536, 65587, 0, 65536, 65588, 0, 65536, 65589, 0, 65536, 65590, 0, 65536, 65591, 0, 65536, 65592, 0, 65536, 65593, 0, 65536, 65594, 0, 2, 65601, 0, 1, 65602, 0, 2, 65622, 0, 131073, 65623, 0, 196619, 65624, 0, 196619, 65625, 0, 196619, 65626, 0, 196619, 65627, 0, 65539, 65628, 0, 2, 65639, 0, 65541, 131117, 0, 65537, 131118, 0, 131072, 131119, 0, 131072, 131120, 0, 131072, 131121, 0, 131072, 131122, 0, 131072, 131123, 0, 131072, 131124, 0, 131072, 131125, 0, 131072, 131126, 0, 131072, 131127, 0, 131072, 131128, 0, 131072, 131129, 0, 131072, 131130, 0, 65547, 131131, 0, 196609, 131132, 0, 196609, 131133, 0, 196609, 131134, 0, 196609, 131135, 0, 196609, 131136, 0, 196609, 131137, 0, 65544, 131138, 0, 65538, 131153, 0, 196608, 131154, 0, 196609, 131155, 0, 196610, 131158, 0, 131073, 131159, 0, 196619, 131160, 0, 196619, 131161, 0, 196619, 131162, 0, 196619, 131163, 0, 196619, 131164, 0, 65539, 131165, 0, 2, 131175, 0, 65541, 196694, 0, 131073, 196695, 0, 196619, 196696, 0, 196619, 196697, 0, 196619, 196698, 0, 196619, 196699, 0, 196619, 196700, 0, 196619, 196701, 0, 65539, 196702, 0, 2, 196711, 0, 65541, 262230, 0, 65537, 262231, 0, 131072, 262232, 0, 131072, 262233, 0, 131072, 262234, 0, 131072, 262235, 0, 131072, 262236, 0, 131072, 262237, 0, 131072, 262238, 0, 65547, 262239, 0, 196609, 262240, 0, 196609, 262241, 0, 196609, 262242, 0, 196609, 262243, 0, 196609, 262244, 0, 196609, 262245, 0, 196609, 262246, 0, 196609, 262247, 0, 65543 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TwinLion" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3456, 32 )
+
+[node name="Sammy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6496, 192 )
+
+[node name="TobiasJump" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 1056, -96 )
+help_text = "Press up to Jump"
+
+[node name="HelpZoneJump" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1024, -64 )
+scale = Vector2( 4, 2 )
+help_node = "../TobiasJump"
+
+[node name="TobiasDouble" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 3168, -128 )
+help_text = "Grab some Wonderful Chicken to Double Jump"
+
+[node name="HelpZoneDouble" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3168, -128 )
+scale = Vector2( 5, 3 )
+help_node = "../TobiasDouble"
+
+[node name="TobiasSammy" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6208, 48 )
+help_text = "Find Sammmy on each level in order to advance"
