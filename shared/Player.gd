@@ -9,6 +9,7 @@ const MAX_JUMPS = 2
 const DEATH_HEIGHT = 1200
 var motion = Vector2()
 var wonderful = false
+var moneys = false
 var jump_count = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

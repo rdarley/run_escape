@@ -31,27 +31,28 @@ position = Vector2( 3456, 32 )
 
 [node name="Sammy" parent="." instance=ExtResource( 5 )]
 position = Vector2( 6496, 192 )
+next_world = "res://scenes/Level_Wilson.tscn"
 
 [node name="TobiasJump" parent="." instance=ExtResource( 6 )]
 visible = false
 position = Vector2( 1056, -96 )
 help_text = "Press up to Jump"
 
-[node name="HelpZoneJump" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1024, -64 )
-scale = Vector2( 4, 2 )
-help_node = "../TobiasJump"
-
 [node name="TobiasDouble" parent="." instance=ExtResource( 6 )]
 visible = false
 position = Vector2( 3168, -128 )
 help_text = "Grab some Wonderful Chicken to Double Jump"
 
+[node name="HelpZoneJump" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1024, -64 )
+scale = Vector2( 4, 2 )
+help_node = "../TobiasJump"
+
 [node name="HelpZoneDouble" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3168, -128 )
+position = Vector2( 3169.11, -129.108 )
 scale = Vector2( 5, 3 )
 help_node = "../TobiasDouble"
 
 [node name="TobiasSammy" parent="." instance=ExtResource( 6 )]
-position = Vector2( 6208, 48 )
+position = Vector2( 6217.74, 48 )
 help_text = "Find Sammmy on each level in order to advance"

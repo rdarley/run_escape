@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://shared/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://shared/DirtAutoTile.tres" type="TileSet" id=2]
 [ext_resource path="res://shared/DirtGrassTile.tres" type="TileSet" id=3]
 [ext_resource path="res://scenes/Door_Back.gd" type="Script" id=4]
 [ext_resource path="res://Sprites/Tiles/CREAKYDOOR.png" type="Texture" id=5]
+[ext_resource path="res://shared/Sammy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://shared/TwinLion.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 40 )
@@ -28,6 +30,7 @@ format = 1
 tile_data = PoolIntArray( 65548, 5, 0, 131084, 2, 0, 131085, 5, 0, 196621, 2, 0, 262158, 5, 0, 327694, 2, 0, 589838, 3, 0, 589839, 4, 0, 589840, 5, 0, 589841, 3, 0, 589842, 5, 0, 589846, 3, 0, 589847, 4, 0, 589848, 4, 0, 589849, 5, 0, 589853, 3, 0, 589854, 4, 0, 589855, 4, 0, 589856, 5, 0, 589857, 3, 0, 589858, 4, 0, 589859, 4, 0, 589860, 5, 0, 589865, 3, 0, 589866, 3, 0, 589867, 5, 0, 655374, 1, 0, 655375, 1, 0, 655376, 1, 0, 655377, 1, 0, 655378, 1, 0, 655379, 1, 0, 655380, 1, 0, 655381, 1, 0, 655382, 1, 0, 655383, 1, 0, 655384, 1, 0, 655385, 1, 0, 655386, 1, 0, 655387, 1, 0, 655388, 1, 0, 655389, 1, 0, 655390, 1, 0, 655391, 1, 0, 655392, 1, 0, 655393, 1, 0, 655394, 1, 0, 655395, 1, 0, 655396, 1, 0, 655397, 1, 0, 655398, 1, 0, 655399, 1, 0, 655400, 1, 0, 655401, 1, 0, 655402, 1, 0, 655403, 2, 0 )
 
 [node name="Door_Back" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( -30, 600 )
 script = ExtResource( 4 )
 __meta__ = {
@@ -41,3 +44,12 @@ flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door_Back"]
 shape = SubResource( 1 )
+
+[node name="Sammy" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2670, 460 )
+scale = Vector2( 2.5, 2.5 )
+
+[node name="TwinLion" parent="." instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 18, 560 )
+scale = Vector2( 2.5, 2.5 )
